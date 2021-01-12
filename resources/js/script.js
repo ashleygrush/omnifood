@@ -5,7 +5,9 @@
 /*-- Opening jQuery function --*/ 
 $(document).ready(function(){
     
+    /*------------------------------------------------*/
     /*-- Sticky Navigation Bar --*/ 
+    /*------------------------------------------------*/
     /* Selects Section features to enable/disable sticky navigation bar. Appears based on direction of user. */
     /* Waypoint package in index file. */
     $('.js--section-features').waypoint(function(direction) {
@@ -22,7 +24,9 @@ $(document).ready(function(){
          offset: '60px'
     });
     
+    /*------------------------------------------------*/
     /* -- Buttons Scroll -- */
+    /*------------------------------------------------*/
     /* Calls "I'm Hungry" Button in Section 0 and jumps/scrolls to Section 6 - Plans when selected. */
     $('.js--scroll-to-plans').click(function () {
         /* Jumops to top of Plans section at a speed of 1000 ms (one second). */
@@ -35,7 +39,9 @@ $(document).ready(function(){
        $('html, body').animate({scrollTop: $('.js--section-features').offset().top}, 1000);
     });
     
+    /*------------------------------------------------*/
     /* -- Navigation Scroll -- */
+    /*------------------------------------------------*/
     /* Navigation scroll code from https://css-tricks.com/snippets/jquery/smooth-scrolling/ */
      $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
@@ -52,7 +58,9 @@ $(document).ready(function(){
       });
     });
     
-    /* -- Animations on Scroll (when section is reached) -- */
+    /*------------------------------------------------*/
+    /* -- Section "Scroll" Animations -- */
+    /*------------------------------------------------*/
     /* Animates Features Row when scrolled to Section. */
     $('.js--wp-1').waypoint(function(direction) {
         /* Calls fadeIn animation as defined from CSS Style sheet. */
@@ -88,5 +96,10 @@ $(document).ready(function(){
         }, {
         offset: '50%'
     });
+    
 /*-- Ending Query Methods --*/     
 });
+
+/*------------------------------------------------*/
+/*-- END --*/  
+/*------------------------------------------------*/
