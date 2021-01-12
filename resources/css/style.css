@@ -285,6 +285,7 @@ header {
     /* Formats text to utilize half of the top/left "instructions" above. */
     transform: translate(-50%, -50%);   
 }
+/* White logo used within main navigation. */
 .logo {
     /* height of logo. */
     height: 100px;
@@ -296,8 +297,26 @@ header {
     margin-top: 20px;
 }
 
+ /* Black logo used within Sticky navigation. */
+.logo-black { 
+    /* Hides logo from main navigation. */
+    display: none; 
+    /* height of logo. */
+    height: 50px;
+    /* Scales to website size. */
+    width: auto;
+    /* Keeps logo on left side of page. Has other items format around it.. */
+    float: left;
+    /* Buffer of 5px from top/bottom of page. 0 left/right. */
+    margin-top: 5px 0;
+}
 
-/* ---------- NAVIGATION ---------- */ 
+
+/* -------------------------------------- */ 
+/* NAVIGATION*/
+/* -------------------------------------- */
+
+/* ---------- MAIN NAVIGATION ---------- */ 
 /* Formats Navigation Menu/Row */
 .main-nav {
     /* Puts navigation menu on right side of the page. */
@@ -337,6 +356,39 @@ header {
 .main-nav li a:active {
     border-bottom: 1px solid #cf6d17;
 }
+
+/* ---------- STICKY NAVIGATION ---------- */ 
+/* Class to define Sticky Navigation. */
+.sticky {
+    /* Fixed position keeps class in one place, regardless of website's "size." */
+    position: fixed;
+    /* Keeps navigation at top and left side of the page. */
+    top: 0;
+    left: 0;
+    /* Sticky bar will stretch to either side of the page. */
+    width: 100%;
+    /* Background color - white w/ slight opacity. */
+    background-color: rgb(255, 255, 255, 0.98);
+    /* Adds shadow to box. 0 x-axis (horizontal), 2px y-axis (vertical), 2px Blur, color. */
+    box-shadow: 0 2px 2px #efefef;
+    /* Z Index, Keeps Navigation bar as "top layer" on page (always visible). 9999 maximum allowed.  */
+    z-index: 9999;
+}
+
+/* Formats Stick Navigation Menu/Row. Minimizes buffer from top of page. */
+.sticky .main-nav { margin-top: 18px; }
+
+/* Formats Navigation Menu/Row text only within Sticky Class (Menu bar) */
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    /* Added 16px padding top/bottom; 0 left/right. */
+    padding: 16px 0;
+    /* Link color is grey. */
+    color: #555;
+}
+ /* Hides main white logo and displays black logo when sticky bar is in use. */
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
 
 
 /* -------------------------------------- */ 
@@ -788,6 +840,33 @@ footer p {
     /* Adds space between footer navigation menu and social links. */
     margin-top: 20px;
 }
+
+/* -------------------------------------- */ 
+/* ANIMATIONS */
+/* -------------------------------------- */ 
+
+/* Hides JS-WP sections before fadeIN and fadeInUp Animations are triggered. */
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {  
+    /* Hides section from view. */
+     opacity: 0;
+    /* Sets animation speed to 1 second. */
+    animation-duration: 1s;
+}
+
+ /* Sets animation speed of JS-WP-4 (Premium Plan Pulse animation) to 1 second. */
+.js--wp-4 {  animation-duration: 1s; }
+
+ /* Returns JS-WP fadeIn and fadeInUp sections after Animation is completed. */
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    /* Returns opacity back to normal once animation is completed. */
+    opacity: 1;
+}
+
+
 
 /* -------------------------------------- */ 
 /* DESIGN NOTES */

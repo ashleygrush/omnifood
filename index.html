@@ -16,9 +16,10 @@
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <!-- References Style sheet to be built -->
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-         <!-- References Icon Style sheet downloaded from https://ionicons.com/v2/ -->
-        <!-- Vendor: https://ionicons.com/v2/ -->
+        <!-- References Icon Style sheet downloaded from https://ionicons.com/v2/. Vendor: https://ionicons.com/v2/ -->
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <!-- References CSS Anmiations. Package from https://animate.style/ (animate.css file from course files)-->
+        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
         <!-- Adds Lato Font Style from Google to website. -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <!-- Font style sheet. -->
@@ -41,12 +42,18 @@
                 <div class="row">
                     <!-- Omnifood Logo -->
                     <img src="resources/img/logo-white.png" alt="Omnifood logo" class="logo">
+                    <!-- Omnifood Logo - Black for sticky Navigation. -->
+                    <img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black">
                     <!-- Website Navigation -->
                     <ul class="main-nav">
-                        <li><a href="#">Food delivery</a></li>     
-                        <li><a href="#">How it works</a></li> 
-                        <li><a href="#">Our cities</a></li>
-                        <li><a href="#">Sign up</a></li> 
+                        <!-- Anchors to Section 1 - Features -->
+                        <li><a href="#features">Food delivery</a></li>  
+                        <!-- Anchors to Section 3 - Works -->
+                        <li><a href="#works">How it works</a></li> 
+                        <!-- Anchors to Section 4 - Cities -->
+                        <li><a href="#cities">Our cities</a></li>
+                        <!-- Anchors to Section 6 - Plans -->
+                        <li><a href="#plans">Sign up</a></li> 
                     </ul>
                 </div>
             </nav>
@@ -54,17 +61,19 @@
             <div class="hero-text-box">
                 <!-- Info as found in Section 0 of the contents provided. -->
                 <h1>Goodbye junk food. <br> Hello super healthy meals.</h1>   
-                    <!-- Link to the "I'm Hungry" section -->
-                    <a class="btn btn-full" href="#">I'm hungry</a>
-                    <!-- Link to the "Show me More" section -->
-                    <a class="btn btn-ghost" href="#">Show me more</a>
+                    <!-- Link to scroll to the "I'm Hungry" section. js-- class for jQuery scroll. -->
+                    <a class="btn btn-full js--scroll-to-plans" href="#">I'm hungry</a>
+                    <!-- Link to scroll to the "Show me More" section.  js-- class for jQuery scroll. -->
+                    <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
             </div>
         </header>
         
 <!------------------------------------------------>
 <!-- SECTION 1 = FEATURES -->
 <!------------------------------------------------>
-        <section class="seaction-features">
+        <!-- Section contains class js-- for jQuery as to add second, similar class name (cleaner transitions between CSS and JS. -->
+        <!-- Section "id" links to anchor tag above in navigation. -->
+        <section class="seaction-features js--section-features" id="features">
             <div class="row">
                 <!-- Header for Section. &mdash; is html code for large dash/bar character -->
                 <h2>Get food fast &mdash; not fast food.</h2>
@@ -73,7 +82,8 @@
                 </p>
             </div>
             <!-- New row to format grid and utilize columns. Total of 4 cloumns. (See additional html note below). -->
-            <div class="row">
+            <!-- Contains second, js-- class to add in CSS/jQuery animations. -->
+            <div class="row js--wp-1">
                 <!-- Column 1 of 4. "Box" added for CSS formatting. -->
                 <div class="col span-1-of-4 box">
                     <!-- iOS infinity icon referenced from https://ionicons.com/v2/ -->
@@ -178,7 +188,8 @@
 <!------------------------------------------------>
 <!-- SECTION 3 - HOW IT WORKS (STEPS) -->
 <!------------------------------------------------>
-        <section class="section-steps">
+        <!-- Section "id" links to anchor tag above in navigation. -->
+        <section class="section-steps" id="works">
             <div class="row">
                 <!-- Header for Section. &mdash; is html code for large dash/bar character -->
                 <h2>How it works &mdash; Simple as 1, 2, 3</h2>
@@ -187,7 +198,8 @@
             <div class="row">
                 <!-- Left Column. steps=-box added for CSS column formatting. -->    
                 <div class="col span-1-of-2 steps-box">
-                    <img src="resources/img/app-iPhone.png" alt="Omnifood app on iphone" class="app-screen">
+                    <!-- js-- class animates phone image. -->   
+                    <img src="resources/img/app-iPhone.png" alt="Omnifood app on iphone" class="app-screen js--wp-2">
                 </div>
                 <!-- Right Column. steps=-box added for CSS column formatting. -->  
                 <div class="col span-1-of-2 steps-box">
@@ -216,13 +228,15 @@
 <!------------------------------------------------>
 <!-- SECTION 4 - CITIES -->
 <!------------------------------------------------>
-        <section class="section-cities">
+        <!-- Section "id" links to anchor tag above in navigation. -->
+        <section class="section-cities" id="cities">
             <div class="row">
                 <!-- Header for Section. -->
                 <h2>We're currently in these cities</h2>
             </div>
             <!-- New row to format grid and utilize columns. Total of 4 cloumns. (See additional html note below). -->
-            <div class="row">
+            <!-- Class js-- adds fadeIn animation when reached. -->
+            <div class="row js--wp-3">
                 <!-- Column 1 of 4. LISBON. "Box" added for CSS formatting. -->
                 <div class="col span-1-of-4 box">
                     <!-- Lisbon -->
@@ -362,7 +376,9 @@
 <!------------------------------------------------>
 <!-- SECTION 6 - PLANS -->
 <!------------------------------------------------>
-        <section class="section-plans">
+        <!-- Section plans. Contains second js class name to "link" button in Section 0. -->
+        <!-- Section "id" links to anchor tag above in navigation. -->
+        <section class="section-plans js--section-plans" id="plans">
             <div class="row">
                 <h2>Start eating healthy today</h2>
             </div>
@@ -370,8 +386,8 @@
             <div class="row">
                 <!-- Plan #1 of 3. -->
                 <div class="col span-1-of-3">
-                    <!-- Box containing "Header" of box. -->
-                    <div class="plan-box">
+                    <!-- Box containing "Header" of box. Class js-- adds pulse animation. -->
+                    <div class="plan-box js--wp-4">
                         <!-- Separated into 3 containers <div> to help with formating the box wider (90% of page). -->
                         <div>
                             <h3>Premium</h3>
@@ -584,9 +600,12 @@
     <script src="https://cdn.jsdelivr.net/npm/html5shiv.min.js@3.7.2/html5shiv.min.js"></script>
     <!-- SelectIVizr allows CSS3 Pseudo classes such as first-child and last-child on older web browsers.Package from https://www.jsdelivr.com/ -->  --> 
     <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
-    <!-- Imports "Local" JQuery Animations -->  
+    <!-- Enables Sticky Navigation - Waypoint Links. Package from http://imakewebthings.com/waypoints/ --> 
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <!-- Imports "Local" JQuery Animations. Must always be last script called. -->  
     <script src="resources/js/script.js"></script>
     
+        
 <!------------------------------------------------>
 <!-- END OF PAGE -->
 <!------------------------------------------------>
@@ -624,6 +643,12 @@
     Input tag. Used to collect information from the user. Type is the type of data it will collecct. Name and ID assigns info used to export data. Placeholder contains info within the field before user enters data (think hint). Required makes it a necessary field
     
     Label tag. When for="" is added to label, it ties the label to an input/action with name="" below. If label is then clicked on site, will select the input/action containing the same value. 
+-->
+
+<!----- STICKY NAVIGATION BUILDING ----->
+<!--
+    Not needed when jQuery call is completed, but add class="sticky" to Nav section for buildout. 
+    <nav class="sticky">
 -->
 
 <!------------------------------------------------>
