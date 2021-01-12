@@ -97,6 +97,32 @@ $(document).ready(function(){
         offset: '50%'
     });
     
+    
+     /*------------------------------------------------*/
+    /* -- Mobile Navigation -- */
+    /*------------------------------------------------*/
+    /* Shows Mobile Navigation when icon is selected. */
+    $('.js--nav-icon').click(function() {
+        /* Assignes main-nav "class" to Nav variable. */
+        var nav = $('.js--main-nav');
+        /* Assignes icon class to icon variable. */
+        var icon = $('.js--nav-icon i');
+        /* Animates box open/close effect, set to 200ms. */
+        nav.slideToggle(200);
+        
+        /* If icon above has class (mobile icon name). */
+        if(icon.hasClass('ion-navicon-round')) {
+            /* Removes existing icon and Adds "Close icon". */
+            icon.addClass('ion-close-round');
+            icon.removeClass('ion-navicon-round');
+        } else {
+            /* Otherwise remove "close icon" and retain normal mobile icon. */
+            icon.addClass('ion-navicon-round');
+            icon.removeClass('ion-close-round');
+        }
+    });
+    
+    
 /*-- Ending Query Methods --*/     
 });
 

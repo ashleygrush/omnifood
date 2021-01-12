@@ -357,6 +357,25 @@ header {
     border-bottom: 1px solid #cf6d17;
 }
 
+/* ---------- MOBILE NAVIGATION ---------- */ 
+/* Formats Mobile Navigation "area". */
+.mobile-nav-icon {
+    /* Positions icon to the right. */
+    float: right;
+    /* 30px buffer from top of page. */
+    margin-top: 30px;
+    /* Makes icon selectable without linking (click to show sub menu). */
+    cursor: pointer;
+    /* Hide's icon from main navigation. */
+    display: none;
+}
+ 
+/* Formats Icon to select Mobile Navigation. */
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;     
+}
+
 /* ---------- STICKY NAVIGATION ---------- */ 
 /* Class to define Sticky Navigation. */
 .sticky {

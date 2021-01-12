@@ -91,8 +91,51 @@
         /* Since columns are now be stacked, just need space on the bottom. */
         margin: 0 0 4% 0;
     }
-     /* Hides main navigation. Will be rebuilt for mobile. */
-    .main-nav { display: none; }
+    /* Hides main navigation to be placed in mobile icon. */
+    .main-nav { display: none;}
+    
+    /* displays mobile icon on page. */
+    .mobile-nav-icon {display: inline-block;} 
+    
+    /* Reformats main navigation for mobile icon use. */
+    .main-nav { 
+        float: left; 
+        /* Adds spacing from top/right. */
+        margin-top: 30px;
+        margin-left: 25px;  
+    }
+    
+    /* Formats Navigation list items to stack (no more side-to-side) */
+    .main-nav li { display: block; }
+    
+    /* Fomats navigation links */
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        /* Forces links to stack (no more side-to-side) */
+        display: block;
+        /* Removes hover border (can't hover on mobile) */
+        border: 0;
+        /* Space between list items 5px top/bottom, 0 left/right. */
+        padding: 10px 0;
+        /* Increases fontsize for mobile viewing. */
+        font-size: 100%;  
+    }
+    
+    
+    /* Formats Stick Navigation Menu/Row. Minimizes buffer from top of page. */
+    .sticky .main-nav { margin-top: 10px; }
+
+    /* Adjust Sticky Navigation Menu/Row padding top/bottom; 0 left/right. */
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited { padding: 10px 0; }
+    /* Moves mobile icon color to top of page. */
+    .sticky .mobile-nav-icon {margin-top: 5px;}
+    /* Changes mobile icon color to black. */
+    .sticky .mobile-nav-icon i { color: #555};
+        
+    
+    
+    
     /* Modifies all H1 Header font sizes. Originally 240% (or aprox. 40 px.) within Reusable Components).. */ 
     h1 { font-size: 180%; }
     /* Modifies all H2 Header font sizes. Originally 180% (or aprox. 36 px.) within Reusable Components).. */ 
