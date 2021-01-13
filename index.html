@@ -4,9 +4,12 @@
 <!-- HEAD -->
 <!------------------------------------------------>
     <head>
-        
+        <!-- Declares character encoding. -->
+        <meta charset="utf-8">
         <!-- Tells mobile phones/tablets to not zoom out to try and view the whole page. -->
         <meta name="viewport" content="width-device-width,initial-scale=1.0"> 
+         <!-- Meta tag "description. Used by google and other SEO's to find the site based on particular keywords used. -->
+        <meta name="description" content="Omni food is a premium food delivery service with the mission to bring afforable and healthy meals to as many people as possible.">
         
         <!-- Normalizes CSS -->
         <!-- Vendor: http://codingheroes.io/resources/ ?? -->
@@ -27,6 +30,17 @@
         <!-- Media Queries CSS sheet to making the webpage responsive to screen px size. -->
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
         
+        <!-- Links to all FavIcons. Images/links generated at https://realfavicongenerator.net/. -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/resources/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#ff0000">
+        <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
         <!-- Website Title -->
         <title>Omnifood</title>
     </head>
@@ -353,15 +367,15 @@
                     <!-- Blockquote, used for quoting other references. Cite to add author. -->
                     <blockquote>
                     Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
-                        <cite><img src="resources/img/customer-1.jpg">Alberto Duncan</cite>
+                        <cite><img src="resources/img/customer-1.jpg" alt="Customer 1 photo">Alberto Duncan</cite>
                     </blockquote>
                 </div>
                 <!-- Review #2 of 3. -->
                 <div class="col span-1-of-3">
                     <!-- Blockquote, used for quoting other references. Cite to add author. -->
-                    <blockquote>
+                    <blockquote> 
                     Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
-                        <cite><img src="resources/img/customer-2.jpg">Joana Silva</cite>
+                        <cite><img src="resources/img/customer-2.jpg" alt="Customer 2 photo">Joana Silva</cite>
                     </blockquote>
                 </div>
                 <!-- Review #3 of 3. -->
@@ -369,7 +383,7 @@
                     <!-- Blockquote, used for quoting other references. Cite to add author. -->
                     <blockquote>
                     I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
-                        <cite><img src="resources/img/customer-3.jpg">Milton Chapman</cite>
+                        <cite><img src="resources/img/customer-3.jpg" alt="Customer 3 photo">Milton Chapman</cite>
                     </blockquote>
                 </div>
             </div>
@@ -606,6 +620,9 @@
     <script src="vendors/js/jquery.waypoints.min.js"></script>
     <!-- Imports "Local" JQuery Animations. Must always be last script called. -->  
     <script src="resources/js/script.js"></script>
+        
+    <!-- When launched, add Google Analytics tracker code here. -->  
+    <!--  <script src="https://analytics.google.com"></script> -->
     
         
 <!------------------------------------------------>
@@ -653,6 +670,12 @@
     <nav class="sticky">
 -->
 
+
+<!----- SEO - VALIDATION ----->
+<!--
+    Paste all code above (minus the comments) to validate site for google. 
+    https://validator.w3.org/nu/#textarea
+-->
 <!------------------------------------------------>
 <!-- END -->
 <!------------------------------------------------>

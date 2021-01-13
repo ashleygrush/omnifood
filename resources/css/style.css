@@ -263,7 +263,7 @@ input[type=submit]:active {
 header {
     /* Background image as found in resources/css/img. Linear-gradient adds dark, filter to image to help with text visibility. */
     /* Set to black with 70% transparency. */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
     /* Adjust image to fill webpage */
     background-size: cover;
     /* Centers background image */ 
@@ -582,7 +582,7 @@ header {
 .section-testimonials {
     /* Background image as found in resources/css/img. Linear-gradient adds dark, filter to image to help with text visibility. */
     /* Set to Black w/ 80% transparency. */
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/back-customers.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/back-customers-min.jpg);
     /* Adjust Image fill section to full size of image. */
     background-size: cover;
     /* Adjust color to white. */
@@ -932,6 +932,19 @@ Orange = #e67e22
     Not sure if a particular CSS fuction above will work in an older browser? Use link below to verify!
     https://caniuse.com/
 */
+
+/* --- Optimization --- */
+/* 
+    Check images and compress where possible. Rule of thumb... take highest "width" used and double that amount for high resolution screens. 
+    If image is still higher than doubled amount, compress file. 
+    Image compressor below is a great tool for larger images.
+    https://imagecompressor.com/
+
+    Ready to launch? Use the following link to optimize CSS code by removing comments + white space. 
+    https://cssminifier.com/
+
+*/
+
 
 /* -------------------------------------- */ 
 /* END */
