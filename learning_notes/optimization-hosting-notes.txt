@@ -1,0 +1,50 @@
+========================================
+=== Optimization ===
+========================================
+
+-- CSS Site to check Website Compatability --
+Not sure if a particular CSS fuction above will work in an older browser? Use link below to verify!
+    https://caniuse.com/
+
+-- Optimization --
+Check images and compress where possible. Rule of thumb... take highest "width" used and double that amount for high resolution screens. 
+If image is still higher than doubled amount, compress file. 
+Image compressor below is a great tool for larger images.
+    https://imagecompressor.com/
+
+Ready to launch? Use the following link to optimize code by removing comments + white space. 
+    HTML Minifier (may also work of all other code.)
+        http://minifycode.com/html-minifier/
+    CSS Optimization:    
+        https://cssminifier.com/
+    JS Optimization:
+        https://javascript-minifier.com/
+
+-- SEO - VALIDATION --
+Paste all code above (minus the comments) to validate site for google. 
+    https://validator.w3.org/nu/#textarea
+
+
+========================================
+== Website Hosting ==
+========================================
+
+-- GoDaddy Hosting --
+Purchase domain name at GoDaddy. 
+    https://www.godaddy.com/
+Once domain is purchased, sign up for hosting (cPanel)
+CPanel is like the file that holds all website information.
+Website files are then placed here:
+    File Manager > public_html 
+    
+-- Upload files to Site --    
+All files need to be placed within public_html to be seen. (Can use brackets extension to upload files)
+In CPanel, create FTS Account to 'connect'
+Using Brackets, FTPS-Sync, connect account.
+    File download should begin.
+One uploaded, can then use brackets connectioon to upload modifications/changes.
+
+-- Google Analytics --
+When launched, add Google Analytics tracker code within HTML scrips
+    https://analytics.google.com/analytics/
+    <script src="https://analytics.google.com"></script>
