@@ -494,18 +494,17 @@
                 <form method="post" action="mailer.php" class="contact-form">
                     <!-- Form Success/Error Messages -->
                     <div class="row">
-                        
+                            <!-- Added PHP format to send form warning responses. -->
+                            <!-- Need to save index.html as .index.php to save as expected. -->
+                            <!-- success = 1 (Correct) | success = -1 (error). -->
                             <?php
-                            <!-- Form messages uses for form submission feedback (successful). -->
-                            <div class="form-messages success">
-                                Thank you! Your message has been sent!
-                            </div>
-                            <!-- Form messages uses for form submission feedback (error occured). -->
-                            <div class="form-messages error">
-                                Opps! Something went wrong. Please try again.
-                            </div>
+                            if($_GET["success"] == 1) {
+                                echo "<div class=\"form-messages success\">Thank you! Your message has been sent.</div>";
+                            }
+                            if($_GET["success"] == -1) {
+                                echo "<div class=\"form-messages error\"> Opps! Something went wrong. Please try again.</div>";
+                            }
                             ?>
-
                         </div>
                         <!-- Text Field - Name -->
                         <div class="row">

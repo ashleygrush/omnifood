@@ -755,6 +755,25 @@ input[type=checkbox] {
 /* CSS Hero class. Removes HTML formatting whe selecting an input field. (Normally outline/highlights in blue) */
 *:focus {outline: none;}
 
+/* Formats form messages section used for form submission feedback (successful or error occured).. */
+.form-messages {
+    width: 70%;
+    /* Centers message. */
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    /* Darkens Form message response text. */
+    color: #333;
+}
+
+/* Formats form response message background to green (slightly transparent.) = successful. */
+.success { background-color: rgba(38, 191, 68, 0.8); }
+
+/* Formats form response message background to red (slightly transparent.) = error occured. */
+.error { background-color: rgba(209, 46, 46, 0.8); }
+
+
 /* -------------------------------------- */ 
 /* SECTION 8 - FOOTER */
 /* -------------------------------------- */ 
